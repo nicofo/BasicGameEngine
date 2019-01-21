@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\src\CollisionSystem.cpp" />
+    <ClCompile Include="..\src\DebugSystem.cpp" />
+    <ClCompile Include="..\src\Game.cpp" />
+    <ClCompile Include="..\src\GraphicsSystem.cpp" />
+    <ClCompile Include="..\src\ControlSystem.cpp" />
+    <ClCompile Include="..\src\GUISystem.cpp" />
+    <ClCompile Include="..\src\linmath.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\MovePlatformScript.cpp" />
+    <ClCompile Include="..\src\Parsers.cpp" />
+    <ClCompile Include="..\src\ScriptSystem.cpp" />
+    <ClCompile Include="..\src\Shader.cpp" />
+    <ClCompile Include="..\src\imgui.cpp">
+      <Filter>imGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\imgui_demo.cpp">
+      <Filter>imGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\imgui_draw.cpp">
+      <Filter>imGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\imgui_impl_glfw.cpp">
+      <Filter>imGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\imgui_impl_opengl3.cpp">
+      <Filter>imGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\imgui_widgets.cpp">
+      <Filter>imGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IAMovementSystem.cpp" />
+    <ClCompile Include="..\src\BasicIAScript.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\PickupScript.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\CollisionSystem.h" />
+    <ClInclude Include="..\src\Components.h" />
+    <ClInclude Include="..\src\DebugSystem.h" />
+    <ClInclude Include="..\src\EntityComponentStore.h" />
+    <ClInclude Include="..\src\Game.h" />
+    <ClInclude Include="..\src\extern.h" />
+    <ClInclude Include="..\src\GraphicsSystem.h" />
+    <ClInclude Include="..\src\GUISystem.h" />
+    <ClInclude Include="..\src\includes.h" />
+    <ClInclude Include="..\src\ControlSystem.h" />
+    <ClInclude Include="..\src\linmath.h" />
+    <ClInclude Include="..\src\MovePlatformScript.h" />
+    <ClInclude Include="..\src\Parsers.h" />
+    <ClInclude Include="..\src\ScriptSystem.h" />
+    <ClInclude Include="..\src\Shader.h" />
+    <ClInclude Include="..\src\shaders_default.h" />
+    <ClInclude Include="..\src\imconfig.h">
+      <Filter>imGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imgui.h">
+      <Filter>imGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imgui_impl_glfw.h">
+      <Filter>imGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imgui_impl_opengl3.h">
+      <Filter>imGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imgui_internal.h">
+      <Filter>imGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imstb_rectpack.h">
+      <Filter>imGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imstb_textedit.h">
+      <Filter>imGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\imstb_truetype.h">
+      <Filter>imGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\src\IAMovementSystem.h" />
+    <ClInclude Include="..\src\BasicIAScript.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\PickupScript.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="imGUI">
+      <UniqueIdentifier>{41c8efab-49e6-42f5-a40e-a812f9ae4aeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts">
+      <UniqueIdentifier>{8359164f-6509-40ee-ac3b-715c46939969}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MVD_Xmas_project2.rc" />
+  </ItemGroup>
+</Project>
