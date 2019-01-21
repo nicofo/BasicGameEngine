@@ -138,6 +138,7 @@ void ControlSystem::updateFPS(float dt) {
 		}
 
 		//move player according to jump force and gravity
+		if (ECS.main_camera != 0) 
 		transform.translate(0.0f, (FPS_jump_force - FPS_gravity)*dt, 0.0f);
 
 		//Collision test #2, as we might have moved down since test #1
