@@ -151,6 +151,8 @@ struct EntityComponentStore {
 	bool game_lose = false;
 	bool game_win = false;
 
+	bool patrol_ia = true;
+
 	int current_pickups = 0;
 	int total_pickups =  2;
     

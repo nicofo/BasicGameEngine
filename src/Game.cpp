@@ -164,6 +164,17 @@ void Game::init() {
 	el_multi.text = text;
 	el_multi.color = lm::vec3(1.0, 0.0, 1.0);
 
+	// **** Difficulty change****
+	int instruccions_glyph = ECS.createEntity("instruccions");
+	GUIText& el_instruccions = ECS.createComponentForEntity<GUIText>(instruccions_glyph);
+	el_instruccions.width = 300;
+	el_instruccions.height = 200;
+	el_instruccions.font_face = "data/fonts/arial.ttf";
+	el_instruccions.font_size = 20;
+	el_instruccions.anchor = GUIAnchorTopLeft;
+	el_instruccions.text = "press:\n (K) IA patrol and follow\n (L) Only follow";
+	el_instruccions.color = lm::vec3(1.0, 0.0, 1.0);
+
 
 	// **** Env****
 	ECS.gui_counter_id = multi_glyph;

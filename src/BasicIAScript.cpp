@@ -115,7 +115,7 @@ void BasicIAScript::update(float dt)
 
 
 	// **** PATROL*****
-	if (!followPlayer) {
+	if (!followPlayer && ECS.patrol_ia) {
 		// Init Select the first waypaint to start patrol
 		if (actualPatrollWaypoint < 0) {
 			actualPatrollWaypoint = findNearestWaypoint(iaPlayerTransform->position());
@@ -166,7 +166,8 @@ void BasicIAScript::update(float dt)
 			auto distanceToPatrollWaypoint = wp.position.distance(iaPlayerTransform->position());
 			// if the entity is in the waypoint,  change  to another waypoint  
 			if (distanceToPatrollWaypoint < 3.0f) {
-				actualPatrollWaypoint = nextWaypointToFindPlayer(actualPatrollWaypoint, nearest_player_waypoint);
+				actualPatrollWaypoint 
+					= nextWaypointToFindPlayer(actualPatrollWaypoint, nearest_player_waypoint);
 				wp = ECS.waypoints[actualPatrollWaypoint];
 			}
 			auto direction = wp.position - iaPlayerTransform->position();
@@ -175,37 +176,4 @@ void BasicIAScript::update(float dt)
 		}
 
 	}
-
-	/*
-	if (followPlayer) {
-		auto direction = realPlayerTransform->position() - iaPlayerTransform->position();
-		iaPlayer->lookTo = direction.normalize();
-		if (distance >=  1.0f) {
-			iaPlayer->go_forward = true;
-		}
-		else {
-			int multi_glyph = ECS.createEntity("lose glyph");
-			GUIText& el_multi = ECS.createComponentForEntity<GUIText>(multi_glyph);
-
-			// set text properties
-			el_multi.width = 300;
-			el_multi.height = 200;
-			el_multi.font_face = "data/fonts/arial.ttf";
-			el_multi.font_size = 40;
-			el_multi.text = "YOU LOSE";
-			el_multi.color = lm::vec3(1.0, 0.0, 1.0);
-			ECS.gui_system_->lateInit();
-			ECS.game_lose = true;
-		}
-	} else {
-		auto distanceToPatrollPosition = patrollPositions[actualPatrollPosition].distance(iaPlayerTransform->position());
-		if (distanceToPatrollPosition < 13.0f) {
-			actualPatrollPosition = (actualPatrollPosition + 1) % patrollPositions.size();
-		}
-		auto direction = patrollPositions[actualPatrollPosition] - iaPlayerTransform->position();
-		iaPlayer->lookTo = direction.normalize();
-		iaPlayer->go_forward = true;
-	}
-	*/
-
 }

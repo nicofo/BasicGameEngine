@@ -180,9 +180,13 @@ void ControlSystem::updateFPS(float dt) {
 
 	//update camera position
 	camera.position = transform.position();
-	std::cout << camera.position.x << ", " << camera.position.y << ", " << camera.position.z << std::endl;
+	//std::cout << camera.position.x << ", " << camera.position.y << ", " << camera.position.z << std::endl;
 	//check if switch to Debug cam
 	if (input[GLFW_KEY_O] == true) ECS.main_camera = 0; //debug cam is 0
 	if (input[GLFW_KEY_P] == true) ECS.main_camera = 1;
+
+	// switch difficulty
+	if (input[GLFW_KEY_K] == true) ECS.patrol_ia = true; //debug cam is 0
+	if (input[GLFW_KEY_L] == true) ECS.patrol_ia = false;
 }
 

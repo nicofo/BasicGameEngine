@@ -180,8 +180,8 @@ struct GUIText : public GUIElement {
 /*
 IA movement generic.
 Like it's the user control system
-
 */
+
 struct IAPlayer : public Component {
 	int collider_down;
 	int collider_left;
